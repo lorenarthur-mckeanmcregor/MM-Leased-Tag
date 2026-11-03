@@ -7,6 +7,9 @@ const CUSTOM_TAG = path.join(__dirname, '..', 'tag.png');
 
 const COLOUR = '#F4930F';
 const MAX_WIDTH = 1200;
+// Tag position as a share of image width. 0 and 0 sits flush in the top left corner.
+const TAG_LEFT = 0;
+const TAG_TOP = 0;
 const ALLOWED_HOST = /(^|\.)rexsoftware\.com$/i;
 
 // Block letters drawn as strokes, so no fonts are needed on the server.
@@ -56,7 +59,7 @@ async function addTag(inputBuffer) {
     tagInput = tagSvg(rmeta.width).svg;
   }
   return sharp(resized)
-    .composite([{ input: tagInput, left: Math.round(rmeta.width * 0.031), top: Math.round(rmeta.width * 0.07) }])
+    .composite([{ input: tagInput, left: Math.round(rmeta.width * TAG_LEFT), top: Math.round(rmeta.width * TAG_TOP) }])
     .jpeg({ quality: 86 })
     .toBuffer();
 }
