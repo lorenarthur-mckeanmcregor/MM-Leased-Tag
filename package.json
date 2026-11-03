@@ -1,0 +1,8 @@
+{
+  "name": "mm-leased-tag",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Adds an orange LEASED tag to a listing image. Used by the sold and leased Meta catalogue.",
+  "engines": { "node": "20.x" },
+  "dependencies": { "sharp": "^0.33.5" }
+}

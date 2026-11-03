@@ -1,0 +1,4 @@
+{
+  "functions": { "api/leased.js": { "memory": 1024, "maxDuration": 15, "includeFiles": "tag.png" } },
+  "rewrites": [ { "source": "/leased.jpg", "destination": "/api/leased" } ]
+}
