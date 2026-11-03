@@ -7,9 +7,9 @@ const CUSTOM_TAG = path.join(__dirname, '..', 'tag.png');
 
 const COLOUR = '#F4930F';
 const MAX_WIDTH = 1200;
-// Tag position as a share of image width. 0 and 0 sits flush in the top left corner.
+// Tag position as a share of image width. Left 0 sits flush to the left edge. Top 0.06 leaves a gap above, as in the approved example.
 const TAG_LEFT = 0;
-const TAG_TOP = 0;
+const TAG_TOP = 0.06;
 const ALLOWED_HOST = /(^|\.)rexsoftware\.com$/i;
 
 // Block letters drawn as strokes, so no fonts are needed on the server.
@@ -81,5 +81,7 @@ module.exports = async (req, res) => {
   } catch (e) {
     res.status(500).send('Error: ' + String(e && e.message ? e.message : e));
   }
+};
+module.exports.addTag = addTag;
 };
 module.exports.addTag = addTag;
