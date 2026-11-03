@@ -83,5 +83,3 @@ module.exports = async (req, res) => {
   }
 };
 module.exports.addTag = addTag;
-};
-module.exports.addTag = addTag;
